@@ -18,7 +18,11 @@ The CSVJSON format is based on the well-known and highly popular JSON format (se
 
 The definition of the CSVJSON format is trivial. Given the definition of a JSON array:
 
+![Reference to the JSON array definition](json-array.png)
+
 Each line in a CSVJSON file is defined as follows:
+
+![The JSON array definition without left bracket and with newline replacing right bracket](csvjson-line.png)
 
 That is, each line in a CSVJSON file is actually just like a JSON array, stripped of the openning left square bracket ([) and with a newline replacing the closing right bracket (]). Newline may only appear after the last value while non-new-line whitespaces around values are ignored. Lines with nothing but whitespaces are ignored.
 
