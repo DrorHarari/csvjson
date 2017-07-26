@@ -18,7 +18,7 @@ The CSVJSON format is based on the well-known and highly popular JSON format (se
 
 The definition of the CSVJSON format is trivial. Given the definition of a JSON array:
 
-![Reference to the JSON array definition](../json-array.png)
+![Reference to the JSON array definition](json-array.png)
 
 Each line in a CSVJSON file is defined as follows:
 
