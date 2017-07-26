@@ -12,7 +12,7 @@ Still, the CSV format suffers from major shotcomings which make it hard to use r
 * There are no standard escaping rules, in particular for values containing newlines
 * There is no way to have object values, array values
 
-All of that and more is solved by a trivially specified format CSVJSON
+**All of that and more is solved by a trivially specified format CSVJSON**
 
 The CSVJSON format is based on the well-known and highly popular JSON format (see http://json.org). For 'simple' data,  CSVJSON is even compatible with the regular CSV format. 
 
