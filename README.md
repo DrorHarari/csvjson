@@ -25,18 +25,18 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 # Questions and Answers
 
 <dl>
-<dt>Q. How is CSVJSON related to JSON Lines (http://jsonlines.org/)</dt>
-<dd>A. The JSON Lines format is textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
+<dt>How is CSVJSON related to JSON Lines (http://jsonlines.org/)</dt>
+<dd>The JSON Lines format is textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
 
-<dt>Q. Is there a recommended file type CSVJSON?</dt>
-<dd>A. The recommended file format for CSVJSON is .csvj although one can also use the .csv file extension because a valid CSVJSON file is a comma-seperated-values file. </dd>
+<dt>Is there a recommended file type CSVJSON?</dt>
+<dd>The recommended file format for CSVJSON is .csvj although one can also use the .csv file extension because a valid CSVJSON file is a comma-seperated-values file. </dd>
 
-<dt>Q. Can CSVJSON data contain complex JSON objects?</dt>
-<dd>A. Sure. As long as the included JSON object does not have newlines. Note that when including JSON objects in a CSVJSON line, there is little chance a regular CSV parser would be able to read it.</dd>
+<dt>Can CSVJSON data contain complex JSON objects?</dt>
+<dd>Sure. As long as the included JSON object does not have newlines. Note that when including JSON objects in a CSVJSON line, there is little chance a regular CSV parser would be able to read it.</dd>
 
-<dt>Q. Is there a recommended mime type for CSVJSON?</dt>
-<dd>A. The recommended file format for CSVJSON is text/csvjson. Note that this mime type is not yet formally registered.</dd>
+<dt>Is there a recommended mime type for CSVJSON?</dt>
+<dd>The recommended file format for CSVJSON is text/csvjson. Note that this mime type is not yet formally registered.</dd>
 	
-<dt>Q. How are newlines defined?</dt>
-<dd>A. Both \n and \r\n can serve as newlines meaning the format should work regardless of whether the file was generated on a Windows or a Linux/Unix based system.</dd>
+<dt>How are newlines defined?</dt>
+<dd>Both \n and \r\n can serve as newlines meaning the format should work regardless of whether the file was generated on a Windows or a Linux/Unix based system.</dd>
 </dl>
