@@ -1,6 +1,3 @@
-# csvjson
-The one CSV format to rule them all - simple, expressive, precise.
-
 # Introducing CSVJSON
 
 The comma separated values (CSV) format is a simple textual data format that has been used for exchanging tabluar data between programs and systems for many years. There is even an RFC attempting to standardize this format - RFC 4180. 
