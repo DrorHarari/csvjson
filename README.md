@@ -26,7 +26,7 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 # Questions and Answers
 
 <dl>
-<dt>How is CSVJSON related to JSON Lines [JSON Lines](http://jsonlines.org/ "The JSONLINES format definition")</dt>
+<dt>How is CSVJSON related to JSON Lines <A HREF="http://jsonlines.org/" TITLE="The JSONLINES format definition">JSON Lines</A>].</dt>
 <dd>The JSON Lines format is a textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
 
 <dt>What is the recommended file type extension for a CSVJSON file?</dt>
