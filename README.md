@@ -11,7 +11,7 @@ Still, the CSV format suffers from major shotcomings which make it hard to use r
 
 **All of that and more is solved by a trivially specified format CSVJSON**
 
-The CSVJSON format is based on the well-known and highly popular JSON format (see http://json.org). For 'simple' data,  CSVJSON is even compatible with the regular CSV format. 
+The CSVJSON format is based on the well-known and highly popular [JSON format](http://json.org "The JSON format definition"). For 'simple' data,  CSVJSON is even compatible with the regular CSV format. 
 
 The definition of the CSVJSON format is trivial. Given the definition of a JSON array:
 
@@ -26,7 +26,7 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 # Questions and Answers
 
 <dl>
-<dt>How is CSVJSON related to JSON Lines (http://jsonlines.org/)</dt>
+<dt>How is CSVJSON related to JSON Lines [JSON Lines](http://jsonlines.org/ "The JSONLINES format definition")</dt>
 <dd>The JSON Lines format is a textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
 
 <dt>What is the recommended file type extension for a CSVJSON file?</dt>
