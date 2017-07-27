@@ -46,9 +46,11 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 
 <dt>What configuration items may be expected in CSVJSON parsers?</dt>
 <dd>The CSVJSON is well defined without complex parsing instructions a typical CSV parser needs. However it would be useful to have several common CSVJSON-related configuration options:
-* csvjson={true|false} - for a general CSV parser, this option will configure it to parse CSVJSON input
-* withObjects={true|false} - parsing JSON object and array values in a CSVJSON file can complicate the parser. For high-performance parsers where there is no need for parsing objects or array values, this option can tell the parser it does not need to deal with that additional complexity, or otherwise let the parser throw an error in case it does not support parsing objects or arrays but it is still asked to.
-* withHeader={true|false} - indicate whether the first line contain comma-seperated column names
+<ul>
+<li>csvjson={true|false} - for a general CSV parser, this option will configure it to parse CSVJSON input</li>
+<li>withObjects={true|false} - parsing JSON object and array values in a CSVJSON file can complicate the parser. For high-performance parsers where there is no need for parsing objects or array values, this option can tell the parser it does not need to deal with that additional complexity, or otherwise let the parser throw an error in case it does not support parsing objects or arrays but it is still asked to.</li>
+<li>withHeader={true|false} - indicate whether the first line contain comma-seperated column names</li>
+</ul>
 </dd>
 
 </dl>
