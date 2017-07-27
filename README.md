@@ -43,4 +43,15 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 	
 <dt>How are newlines defined?</dt>
 <dd>Both \n and \r\n can serve as newlines meaning the format should work regardless of whether the file was generated on a Windows or a Linux/Unix based system.</dd>
+
+<dt>Is there actually software out there that support CSVJSON?</dt>
+<dd>Not yet, at least not explicitly. Still the concept is so simple and compelling that it had to be publically articulated. Reference to implementations will be added as they appear.</dd>
+
+<dt>What configuration items may be expected in CSVJSON parsers?</dt>
+<dd>The CSVJSON is well defined without complex parsing instructions a typical CSV parser needs. However it would be useful to have several common CSVJSON-related configuration options:
+* csvjson={true|false} - for a general CSV parser, this option will configure it to parse CSVJSON input
+* withObjects={true|false} - parsing JSON object and array values in a CSVJSON file can complicate the parser. For high-performance parsers where there is no need for parsing objects or array values, this option can tell the parser it does not need to deal with that additional complexity, or otherwise let the parser throw an error in case it does not support parsing objects or arrays but it is still asked to.
+* withHeader={true|false} - indicate whether the first line contain comma-seperated column names
+</dd>
+
 </dl>
