@@ -1,6 +1,3 @@
-# csvjson
-The one CSV format to rule them all - simple, expressive, precise.
-
 # Introducing CSVJSON
 
 The comma separated values (CSV) format is a simple textual data format that has been used for exchanging tabluar data between programs and systems for many years. There is even an RFC attempting to standardize this format - RFC 4180. 
@@ -12,7 +9,7 @@ Still, the CSV format suffers from major shotcomings which make it hard to use r
 * There are no standard escaping rules, in particular for values containing newlines
 * There is no way to have object values, array values
 
-All of that and more is solved by a trivially specified format CSVJSON
+**All of that and more is solved by a trivially specified format CSVJSON**
 
 The CSVJSON format is based on the well-known and highly popular JSON format (see http://json.org). For 'simple' data,  CSVJSON is even compatible with the regular CSV format. 
 
@@ -30,10 +27,10 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 
 <dl>
 <dt>How is CSVJSON related to JSON Lines (http://jsonlines.org/)</dt>
-<dd>The JSON Lines format is textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
+<dd>The JSON Lines format is a textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
 
-<dt>Is there a recommended file type CSVJSON?</dt>
-<dd>The recommended file format for CSVJSON is .csvj although one can also use the .csv file extension because a valid CSVJSON file is a comma-seperated-values file. </dd>
+<dt>What is the recommended file type extension for a CSVJSON file?</dt>
+<dd>The recommended file format for CSVJSON files is .csvj although one can also use the .csv file extension because a valid CSVJSON file is also a comma-seperated-values file (with JSON rules). </dd>
 
 <dt>Can CSVJSON data contain complex JSON objects?</dt>
 <dd>Sure. As long as the included JSON object does not have newlines. Note that when including JSON objects in a CSVJSON line, there is little chance a regular CSV parser would be able to read it.</dd>
