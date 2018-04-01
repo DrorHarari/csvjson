@@ -27,36 +27,35 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 # Samples
 
 ## Regular CSV
-'''
+```
 1,"John","12 Totem Rd. Aspen",true
 2,"Bob",null,false
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
-'''
+```
 
 ## CSV file with headers
-'''
+```
 "id","name","address","regular"
 1,"John","12 Totem Rd. Aspen",true
 2,"Bob",null,false
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
-'''
+```
 
 ## CSV file with headers and data having embedded quotes and commas
-'''
+```
 "id","name","address","regular"
 1,"John","12 Totem Rd., Aspen",true
 2,"Bob",null,false
 3,"Sue","\"Bigsby\", 345 Carnival, WA 23009",false
-'''
+```
 
 ## CSV file with complex headers
-'''
+```
 {"field":"id","type":"int"},{"field":"name","type":"string"},{"field":"address","type":"string"},{"field":"regular","type":"boolean"}
 1,"John","12 Totem Rd. Aspen",true
 2,"Bob",null,false
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
-'''
-
+```	
 
 
 # Questions and Answers
