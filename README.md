@@ -23,10 +23,46 @@ Each line in a CSVJSON file is defined as follows:
 
 That is, each line in a CSVJSON file is actually just like a JSON array, stripped of the openning left square bracket ([) and with a newline replacing the closing right bracket (]). Newline may only appear after the last value while non-new-line whitespaces around values are ignored. Lines with nothing but whitespaces are ignored.
 
+
+# Samples
+
+## Regular CSV
+'''
+1,"John","12 Totem Rd. Aspen",true
+2,"Bob",null,false
+3,"Sue","Bigsby, 345 Carnival, WA 23009",false
+'''
+
+## CSV file with headers
+'''
+"id","name","address","regular"
+1,"John","12 Totem Rd. Aspen",true
+2,"Bob",null,false
+3,"Sue","Bigsby, 345 Carnival, WA 23009",false
+'''
+
+## CSV file with headers and data having embedded quotes and commas
+'''
+"id","name","address","regular"
+1,"John","12 Totem Rd., Aspen",true
+2,"Bob",null,false
+3,"Sue","\"Bigsby\", 345 Carnival, WA 23009",false
+'''
+
+## CSV file with complex headers
+'''
+{"field":"id","type":"int"},{"field":"name","type":"string"},{"field":"address","type":"string"},{"field":"regular","type":"boolean"}
+1,"John","12 Totem Rd. Aspen",true
+2,"Bob",null,false
+3,"Sue","Bigsby, 345 Carnival, WA 23009",false
+'''
+
+
+
 # Questions and Answers
 
 <dl>
-<dt>How is CSVJSON related to JSON Lines <A HREF="http://jsonlines.org/" TITLE="The JSONLINES format definition">JSON Lines</A>].</dt>
+<dt>How is CSVJSON related to JSON Lines <A HREF="http://jsonlines.org/" TITLE="The JSONLINES format definition">JSON Lines</A>.</dt>
 <dd>The JSON Lines format is a textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
 
 <dt>What is the recommended file type extension for a CSVJSON file?</dt>
