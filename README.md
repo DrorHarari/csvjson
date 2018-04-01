@@ -24,16 +24,16 @@ Each line in a CSVJSON file is defined as follows:
 That is, each line in a CSVJSON file is actually just like a JSON array, stripped of the openning left square bracket ([) and with a newline replacing the closing right bracket (]). Newline may only appear after the last value while non-new-line whitespaces around values are ignored. Lines with nothing but whitespaces are ignored.
 
 
-# Samples
+## Samples
 
-## Regular CSV
+### Regular CSV
 ```
 1,"John","12 Totem Rd. Aspen",true
 2,"Bob",null,false
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
 ```
 
-## CSV file with headers
+### CSV with headers row
 ```
 "id","name","address","regular"
 1,"John","12 Totem Rd. Aspen",true
@@ -41,7 +41,7 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
 ```
 
-## CSV file with headers and data having embedded quotes and commas
+### CSV with data containing quotes and commas
 ```
 "id","name","address","regular"
 1,"John","12 Totem Rd., Aspen",true
@@ -49,12 +49,20 @@ That is, each line in a CSVJSON file is actually just like a JSON array, strippe
 3,"Sue","\"Bigsby\", 345 Carnival, WA 23009",false
 ```
 
-## CSV file with complex headers
+### CSV with complex headers
 ```
 {"field":"id","type":"int"},{"field":"name","type":"string"},{"field":"address","type":"string"},{"field":"regular","type":"boolean"}
 1,"John","12 Totem Rd. Aspen",true
 2,"Bob",null,false
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
+```	
+
+### CSV with array data
+```
+1,"directions",["north","south","east","west"]
+2,"colors",["red","green","blue"]
+3,"drinks",["soda","water","tea","coffe"]
+4,"spells",[]
 ```	
 
 
