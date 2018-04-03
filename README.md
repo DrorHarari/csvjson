@@ -98,7 +98,7 @@ Below are examples of valid CSVJSON content
 <dd>Both \n and \r\n can serve as newlines meaning the format should work regardless of whether the file was generated on a Windows or a Linux/Unix based system.</dd>
 
 <dt>Is there actually software out there that support CSVJSON?</dt>
-<dd>I am not currently aware of parsers/serializers that support the CSVJSON variant - as such parsers, serializers and  software tools supporting CSVJSON appear, I will list them below. If you have created or are aware of such software, please open an issue on [Github issues](https://github.com/DrorHarari/csvjson/issues).</dd>
+<dd>I am not currently aware of parsers/serializers that support the CSVJSON variant - as such parsers, serializers and  software tools supporting CSVJSON appear, I will list them below. If you have created or are aware of such software, please open an issue on <a href="https://github.com/DrorHarari/csvjson/issues">Github issues</a>.</dd>
 
 <dt>What configuration items may be expected in CSVJSON parsers?</dt>
 <dd>The CSVJSON is well defined without complex parsing instructions a typical CSV parser needs. However it would be useful to have several common CSVJSON-related configuration options:
@@ -115,5 +115,5 @@ Below are examples of valid CSVJSON content
 <dl>
 
 <dt>csvjson.com - Online tools to convert popular data formats</dt>
-<dd>The csvjson.com web application offers conversions between JSON and CSV, and offers support for the CSVJSON format as well. Thanks [Martin Drapeau](https://github.com/martindrapeau).</dd>
+<dd>The csvjson.com web application offers conversions between JSON and CSV, and offers support for the CSVJSON format as well. Thanks <a href="https://github.com/martindrapeau">Martin Drapeau</a>.</dd>
 </dl>
