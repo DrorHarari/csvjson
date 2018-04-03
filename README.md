@@ -68,14 +68,14 @@ Below are examples of valid CSVJSON content
 
 ### CSV with all kinds of data
 ```
-"index","value1","value2"
+type,value1,value2
 "number",1,2
-"boolean",false,true
-"null",null,"non null"
+"boolean",false,true,
+"null",null,"non null",
 "array of numbers",[1],[1,2]
-"simple object",{"a": 1},{"a":1, "b":2}
-"array with mixed objects",[1,null,"ball"],[2,{"a": 10, "b": 20},"cube"]
-"string with quotes","a\"b","alert(\"Hi!\")"
+"simple object",{"a":1},{"a":1,"b":2}
+"array with mixed objects",[1,null,"ball"],[2,{"a":10,"b":20},"cube"]
+"string with quotes","a\"b","alert("Hi!")"
 "string with bell&newlines","bell is \u0007","multi\nline\ntext"
 ```
 
