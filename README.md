@@ -114,6 +114,6 @@ Below are examples of valid CSVJSON content
 # Software that supports CSVJSON
 <dl>
 
-<dt>csvjson.com - Online tools to convert popular data formats</dt>
+<dt><a href="https://www.csvjson.com">csvjson.com</a> - Online tools to convert popular data formats</dt>
 <dd>The csvjson.com web application offers conversions between JSON and CSV, and offers support for the CSVJSON format as well. Thanks <a href="https://github.com/martindrapeau">Martin Drapeau</a>.</dd>
 </dl>
