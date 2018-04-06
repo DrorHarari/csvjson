@@ -94,7 +94,7 @@ CSVJSON is an ideal format for exporting database tables to text files. Here are
 
 <dl>
 <dt>How is CSVJSON related to JSON Lines <A HREF="http://jsonlines.org/" TITLE="The JSONLINES format definition">JSON Lines</A>.</dt>
-<dd>The JSON Lines format is a textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON.</dd>
+<dd>The JSON Lines format is a textual format for tabular data where each line is a valid JSON value. The CSVJSON format is a textual format for tabular data where each line has zero or more valid JSON values separated by commas. One can view JSON Lines as a special case of CSVJSON. CSVJSON has the benefit over JSON Lines in that for numbers and 'simple' strings, it aligns with the regular CSV format.</dd>
 
 <dt>What is the recommended file type extension for a CSVJSON file?</dt>
 <dd>The recommended file format for CSVJSON files is .csvj although one can also use the .csv file extension because a valid CSVJSON file is also a comma-seperated-values file (with JSON rules). </dd>
