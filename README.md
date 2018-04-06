@@ -79,6 +79,17 @@ Below are examples of valid CSVJSON content
 "string with bell&newlines","bell is \u0007","multi\nline\ntext"
 ```
 
+# Use Cases
+
+## Common textual database table export format
+
+CSVJSON is an ideal format for exporting database tables to text files. Here are some benefits:
+1. Being based on UTF-8 it can reliably maintain text from different languages.
+2. It has a standard concept of nulls.
+3. It can deal with modern database features like rows with embedded objects and arrays.
+4. Being based on JSON, there is large variety of high quality formatters and parsers in virtually every programming language.
+5. The CSVJSON header line can be used to store each column definition like: {"name":"ID","type":"number"},{"name":"TITLE","type":"string"}}
+
 # Questions and Answers
 
 <dl>
@@ -112,6 +123,9 @@ Below are examples of valid CSVJSON content
 </dl>
 
 # Software that supports CSVJSON
+
+CSVJSON is more expressive than CSV (whose common use is documented by [RFC-4180](https://tools.ietf.org/html/rfc4180)). As a result, there are many cases where products and libraries that can read CSV would fail to read CSVJSON due, for example, to escaping rules and embedded objects. Given CSVJSON's simplicity and utility more tools and libraries will support it over time.
+
 <dl>
 
 <dt>csvjson.com - Online tools to convert popular data formats</dt>
