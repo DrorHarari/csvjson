@@ -86,9 +86,13 @@ Below are examples of valid CSVJSON content
 CSVJSON is an ideal format for exporting database tables to text files. Here are some benefits:
 1. Being based on UTF-8 it can reliably maintain text from different languages.
 2. It has a standard concept of nulls.
-3. It can deal with modern database features like rows with embedded objects and arrays.
+3. It can deal with modern database features like rows with embedded objects and arrays. A good example is coordinates and polygons in GIS (Geographical Information Systems).
 4. Being based on JSON, there is large variety of high quality formatters and parsers in virtually every programming language.
 5. The CSVJSON header line can be used to store each column definition like: {"name":"ID","type":"number"},{"name":"TITLE","type":"string"}}
+
+## Simple, low maintenance, big-data storage format
+
+Many big-data projects have to do significant work dealing with the nessiness of the common CSV format. CSVJSON stores tabluar data naturally with high fidelity. It easily capture all the required semantics including character encoding, representation of null values among others. In addition CSVJSON support parallel processing by arbitrarily splitting the files into several parts because newlines may only appear between lines. So, if a 10GB worth of CSVJSON needs to be processed, one can spawn 10 parallel tasks where each task processes aruond 1GB of data and all but the first just skip forward past the next newline and starts there, ending with the last line that started within the 1GB range. The CSVJSON file may also be snappy-compressed to and still allow for parallel processing.
 
 # Questions and Answers
 
@@ -110,6 +114,9 @@ CSVJSON is an ideal format for exporting database tables to text files. Here are
 
 <dt>Is there actually software out there that support CSVJSON?</dt>
 <dd>I am not currently aware of parsers/serializers that support the CSVJSON variant - as such parsers, serializers and  software tools supporting CSVJSON appear, I will list them below. If you have created or are aware of such software, please open an issue on <a href="https://github.com/DrorHarari/csvjson/issues">Github issues</a>.</dd>
+
+<dt>Wouldn't using \1 or similar control character as delimiter enable better performance?</dt>
+<dd>Using a delimiter like \1 or any other character than cannot appear within JSON string literals or within raw JSON can make the parsing faster, especially when trying to skip complex values (that is, if you're not interested in parsing complex values, you can skip to the new \1 very quickly. This will save power and thus be 'greener' but then it would not be so easily compatible with common JSON parsers and this is a high price to pay.</dd>
 
 <dt>What configuration items may be expected in CSVJSON parsers?</dt>
 <dd>The CSVJSON is well defined without complex parsing instructions a typical CSV parser needs. However it would be useful to have several common CSVJSON-related configuration options:
