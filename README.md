@@ -116,7 +116,7 @@ Many big-data projects have to do significant work dealing with the nessiness of
 <dd>I am not currently aware of parsers/serializers that support the CSVJSON variant - as such parsers, serializers and  software tools supporting CSVJSON appear, I will list them below. If you have created or are aware of such software, please open an issue on <a href="https://github.com/DrorHarari/csvjson/issues">Github issues</a>.</dd>
 
 <dt>Wouldn't using \1 or similar control character as delimiter enable better performance?</dt>
-<dd>Using a delimiter like \1 or any other character than cannot appear within JSON string literals or within raw JSON can make the parsing faster, especially when trying to skip complex values (that is, if you're not interested in parsing complex values, you can skip to the new \1 very quickly. This will save power and thus be 'greener' but then it would not be so easily compatible with common JSON parsers and this is a high price to pay.</dd>
+<dd>Using a delimiter like \1 or any other character than cannot appear within JSON string literals or within raw JSON can make the parsing faster. This will be the case when trying to skip complex values that are not of interest - one can skip to the next \1 very quickly. This will save power and thus be 'greener' but then it would not be so easily compatible with common JSON parsers and this is a high price to pay.</dd>
 
 <dt>What configuration items may be expected in CSVJSON parsers?</dt>
 <dd>The CSVJSON is well defined without complex parsing instructions a typical CSV parser needs. However it would be useful to have several common CSVJSON-related configuration options:
