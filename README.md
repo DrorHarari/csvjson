@@ -1,4 +1,4 @@
-# Introducing CSVJSON
+## Introducing CSVJSON
 
 The comma separated values (CSV) format is a simple textual data format that has been used for exchanging tabluar data between programs and systems for many years. There is even an RFC attempting to standardize this format - RFC 4180. 
 
@@ -24,17 +24,17 @@ Each line in a CSVJSON file is defined as follows:
 That is, each line in a CSVJSON file is actually just like a JSON array, stripped of the openning left square bracket ([) and with a newline replacing the closing right bracket (]). Newline may only appear after the last value while non-new-line whitespaces around values are ignored. Lines with nothing but whitespaces are ignored.
 
 
-## Samples
+### Samples
 Below are examples of valid CSVJSON content
 
-### Regular CSV
+#### Regular CSV
 ```
 1,"John","12 Totem Rd. Aspen",true
 2,"Bob",null,false
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
 ```
 
-### CSV with headers row
+#### CSV with headers row
 ```
 "id","name","address","regular"
 1,"John","12 Totem Rd. Aspen",true
@@ -42,7 +42,7 @@ Below are examples of valid CSVJSON content
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
 ```
 
-### CSV with data containing quotes and commas
+#### CSV with data containing quotes and commas
 ```
 "id","name","address","regular"
 1,"John","12 Totem Rd., Aspen",true
@@ -50,7 +50,7 @@ Below are examples of valid CSVJSON content
 3,"Sue","\"Bigsby\", 345 Carnival, WA 23009",false
 ```
 
-### CSV with complex headers
+#### CSV with complex headers
 ```
 {"field":"id","type":"int"},{"field":"name","type":"string"},{"field":"address","type":"string"},{"field":"regular","type":"boolean"}
 1,"John","12 Totem Rd. Aspen",true
@@ -58,7 +58,7 @@ Below are examples of valid CSVJSON content
 3,"Sue","Bigsby, 345 Carnival, WA 23009",false
 ```	
 
-### CSV with array data
+#### CSV with array data
 ```
 1,"directions",["north","south","east","west"]
 2,"colors",["red","green","blue"]
@@ -66,7 +66,7 @@ Below are examples of valid CSVJSON content
 4,"spells",[]
 ```	
 
-### CSV with all kinds of data
+#### CSV with all kinds of data
 ```
 "index","value1","value2"
 "number",1,2
@@ -79,7 +79,7 @@ Below are examples of valid CSVJSON content
 "string with bell&newlines","bell is \u0007","multi\nline\ntext"
 ```
 
-# Use Cases
+## Use Cases
 
 ## Common textual database table export format
 
@@ -90,11 +90,11 @@ CSVJSON is an ideal format for exporting database tables to text files. Here are
 4. Being based on JSON, there is large variety of high quality formatters and parsers in virtually every programming language.
 5. The CSVJSON header line can be used to store each column definition like: {"name":"ID","type":"number"},{"name":"TITLE","type":"string"}}
 
-## Simple, low maintenance, big-data storage format
+### Simple, low maintenance, big-data storage format
 
 Many big-data projects have to do significant work dealing with the messiness of the common CSV format. CSVJSON stores tabluar data naturally with high fidelity. It easily captures all the required semantics including character encoding, representation of null values among others. In addition CSVJSON support parallel processing by arbitrarily splitting the files into several parts because newlines may only appear between lines. So, if a 10GB worth of CSVJSON needs to be processed, one can spawn 10 parallel tasks where each task processes aruond 1GB of data and all but the first just skip forward past the next newline and starts there, ending with the last line that started within the 1GB range. The CSVJSON file may also be snappy-compressed to and still allow for parallel processing.
 
-# Questions and Answers
+## Questions and Answers
 
 <dl>
 <dt>How is CSVJSON related to JSON Lines <A HREF="http://jsonlines.org/" TITLE="The JSONLINES format definition">JSON Lines</A>.</dt>
@@ -129,7 +129,7 @@ Many big-data projects have to do significant work dealing with the messiness of
 
 </dl>
 
-# Software that supports CSVJSON
+## Software that supports CSVJSON
 
 CSVJSON is more expressive than CSV (whose common use is documented by [RFC-4180](https://tools.ietf.org/html/rfc4180)). As a result, there are many cases where products and libraries that can read CSV would fail to read CSVJSON due, for example, to escaping rules and embedded objects. Given CSVJSON's simplicity and utility more tools and libraries will support it over time.
 
